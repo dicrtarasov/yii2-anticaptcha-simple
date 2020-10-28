@@ -3,7 +3,7 @@
  * @copyright 2019-2020 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 28.10.20 01:29:22
+ * @version 28.10.20 14:40:31
  */
 
 declare(strict_types = 1);
@@ -184,7 +184,7 @@ class CaptchaRequest extends JsonEntity
     {
         return [
             ['method', 'trim'],
-            ['method', 'required'],
+            ['method', 'default'],
 
             ['version', 'trim'],
             ['version', 'default'],
@@ -221,7 +221,7 @@ class CaptchaRequest extends JsonEntity
             ['language', 'filter', 'filter' => 'intval', 'skipOnEmpty' => true],
 
             ['lang', 'default'],
-            ['lang', 'string', 'lang' => 2],
+            ['lang', 'string', 'length' => 2],
 
             ['textCaptcha', 'trim'],
             ['textCaptcha', 'default'],

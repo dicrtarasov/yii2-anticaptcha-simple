@@ -3,7 +3,7 @@
  * @copyright 2019-2020 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 28.10.20 01:09:49
+ * @version 28.10.20 14:38:46
  */
 
 declare(strict_types = 1);
@@ -38,7 +38,9 @@ new yii\console\Application([
                     'levels' => ['error', 'warning', 'info', 'trace']
                 ]
             ]
-        ],
+        ]
+    ],
+    'modules' => [
         'anticaptcha' => [
             'class' => dicr\anticaptcha\simple\AntiCaptchaSimpleModule::class,
             'key' => '96edc988b29b84fdce67ae9433febf05'
